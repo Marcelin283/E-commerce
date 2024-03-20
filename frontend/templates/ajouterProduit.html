@@ -1,0 +1,35 @@
+{% extends "index.html" %}
+
+{% block contenu %}
+<title>AJOUTER UN PRODUIT</title>
+<form action="{% url 'frontend:ajouterProduit' %}" method="POST">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Ajouter un produits</legend>
+
+        <label for="nom">Nom du produit</label> <br>
+        <input type="text" name="nom">
+        <br> <br>
+        <label for="prix">Prix</label><br>
+        <input type="number" name="prix">
+        <br> <br>
+        <label for="qte">Quantite</label> <br>
+        <input type="number" name="qte">
+        <br> <br>
+        <label for="categorie">Categorie</label><br>
+        <select name="categorie" id="">
+            <option value="cosmetique">Cosmetique</option>
+            <option value="automobile">Automobile</option>
+            <option value="alimentaire">Alimentaire</option>
+            <option value="vestimentaire">Vestimentaire</option>
+            <option value="Bureautique">Bureautique</option>
+            <option value="divertissement">Divertissement</option>
+        </select>
+        <br><br>
+        <input type="submit">
+
+    </fieldset>
+
+
+</form>
+{% endblock  %}

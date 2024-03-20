@@ -1,0 +1,55 @@
+body{
+    background-color: #002451; 
+}
+header{
+	background: #00346e;
+}
+
+form{
+    text-align: center;
+}
+nav li{
+	display: inline-block;
+	list-style: none;
+	padding-right: 7em;
+	font-weight: bold;
+	padding-left: 7em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+
+}
+
+nav a{
+	text-decoration: none;
+	color: orange;
+	text-size-adjust: 10em;
+}
+nav a:hover{
+	color: yellow;
+    text-decoration: underline;
+    size: 30em;
+}
+
+h1{
+    text-align: center;
+    color: orange;
+}
+
+a{
+    text-decoration: none;
+	color: orange;
+	text-size-adjust: 10em;
+}
+
+p{
+    color: orange;
+    font-weight: bold;
+}
+
+form label{
+    color: orange;
+}
+
+legend{
+    color: orange;
+}

@@ -1,0 +1,26 @@
+{% extends "index.html" %}
+
+
+{% block contenu %}
+<title>DASHBOARD</title>
+<h1>BIENVENU SUR LE DASHBOARD</h1>
+<h1>ICI VOUS POUVEZ CONSULTER LA LISTE DE TOUTES LES VENTES</h1>
+
+
+{% for vente in ventes %}
+    <fieldset>
+        <div>
+            <p>ID produit: {{vente.produit.id}}</p>
+            <p>Produits:{{vente.produit.nom}}</p>
+            <p>Quantite: {{vente.quantite}}</p>
+            <p>Date: {{vente.date}}</p>
+        </div>
+    </fieldset>
+    <br>
+
+
+{% endfor %}
+
+
+
+{% endblock  %}

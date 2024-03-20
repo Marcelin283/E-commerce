@@ -1,0 +1,40 @@
+{% extends "index.html" %}
+
+{% block contenu  %}
+
+<title>MODIFIER UN PRODUIT</title>
+
+<h1>PAGE UPDATE</h1>
+
+<form action="{% url 'frontend:modifier' produits.id %}" method="POST">
+    {% csrf_token %}
+    <fieldset>
+        <legend>Modifier un produits</legend>
+
+        <label for="nom">Nom du produit</label> <br>
+        <input type="text" name="nom" value="{{produits.nom}}">
+        <br> <br>
+        <label for="prix">Prix</label><br>
+        <input type="number" name="prix"value="{{produits.prix}}">
+        <br> <br>
+        <label for="qte">Quantite</label> <br>
+        <input type="number" name="qte" value="{{produits.qte}}">
+        <br> <br>
+        <label for="categorie">Categorie</label><br>
+        <select name="categorie" value="{{produit.categorie}}">
+            <option value="cosmetique">Cosmetique</option>
+            <option value="automobile">Automobile</option>
+            <option value="alimentaire">Alimentaire</option>
+            <option value="bureautique">Bureautique</option>
+            <option value="vestimentaire">Vestimentaire</option>
+            <option value="divertissement">Divertissement</option>
+        </select>
+        <br><br>
+        <input type="submit">
+
+    </fieldset>
+
+
+</form>
+
+{% endblock  %}

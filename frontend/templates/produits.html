@@ -1,0 +1,27 @@
+{% extends "index.html" %}
+
+{% block contenu %}
+<title>NOS PRODUITS</title>
+<h1>BIENVENU SUR LA PAGE PRODUITS</h1>
+<h1>VOUS POUVEZ CONSULTER LA LISTE DE NOS PRODUITS</h1>
+
+<a href="{% url 'frontend:ajouterProduit' %}">Ajouter un produit</a>
+<br><br><br>
+{% for produit in produits %}
+    <fieldset>
+        <div>
+            <p>Nom : {{produit.nom}}</p>
+            <p>Prix : {{produit.prix}}</p>
+            <p>Categorie : {{produit.categorie}}</p>
+            <p>Quantite en stock : {{produit.qte}}</p>
+    
+            <a href="{% url 'frontend:modifier' produit.id %}">Modifier</a>
+            <a href="{% url 'frontend:supprimer' produit.id %}">Supprimer</a>
+            <a href="{% url 'frontend:acheter' produit.id %}">Acheter</a>
+        </div>
+    </fieldset>
+    <br><br>
+
+{% endfor %}
+
+{% endblock  %}

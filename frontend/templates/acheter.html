@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block  contenu%}
+<title>ACHETER UN PRODUIT</title>
+
+<br><br>
+
+<form action="{% url 'frontend:acheter' produit.id %}" method="POST">
+
+    {% csrf_token %}
+    <label for="quantite">Quantite</label>
+    <input type="number" name="quantite">
+
+    <input type="submit">
+
+
+
+</form>
+
+{% endblock  %}
+

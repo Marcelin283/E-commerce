@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <nav>
+            <li><a href="{% url 'frontend:acceuil' %}">ACCEUIL</a></li>
+            <li><a href="{% url 'frontend:produits' %}">NOS PRODUITS</a></li>
+            <li><a href="{% url 'frontend:dashboard' %}">DASHBOARD</a></li>
+            <li><a href="{% url 'frontend:services' %}">SERVICES</a></li>
+            
+        </nav>
+    </header>
+    
+{% block contenu %}
+
+{% endblock  %}
+
+</body>
+</html>
